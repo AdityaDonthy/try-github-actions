@@ -34,3 +34,12 @@ jobs:
         run: |
           echo This is running on a VM hosted by github
           echo This is where we can test, and deploy our code!!.
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+      
+      - name: Run unit tests
+        run: echo running tests
+    # The type of runner that the job will run on
